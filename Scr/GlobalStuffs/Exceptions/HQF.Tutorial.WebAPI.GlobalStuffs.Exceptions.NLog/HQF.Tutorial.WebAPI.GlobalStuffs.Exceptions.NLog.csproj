@@ -7,8 +7,8 @@
     <ProjectGuid>{E52C61B0-64C7-443E-981F-5AB3DC871636}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HQF.Tutorial.WebAPI.Filters.Exceptions.NLog</RootNamespace>
-    <AssemblyName>HQF.Tutorial.WebAPI.Filters.Exceptions.NLog</AssemblyName>
+    <RootNamespace>HQF.Tutorial.WebAPI.GlobalStuffs.Exceptions.NLog</RootNamespace>
+    <AssemblyName>HQF.Tutorial.WebAPI.GlobalStuffs.Exceptions.NLog</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

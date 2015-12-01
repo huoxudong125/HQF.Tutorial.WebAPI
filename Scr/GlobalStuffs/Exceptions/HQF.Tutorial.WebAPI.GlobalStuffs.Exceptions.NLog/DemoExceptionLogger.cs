@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http.ExceptionHandling;
 
-namespace HQF.Tutorial.WebAPI.Filters.Exceptions
+namespace HQF.Tutorial.WebAPI.GlobalStuffs.Exceptions.NLog
 {
     public class DemoExceptionLogger : IExceptionLogger
     {

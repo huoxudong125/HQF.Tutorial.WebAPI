@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.ExceptionHandling;
-using HQF.Tutorial.WebAPI.Filters.Exceptions.NLog;
+using HQF.Tutorial.WebAPI.GlobalStuffs.Exceptions.NLog;
 
 namespace HQF.Tutorial.WebAPI
 {

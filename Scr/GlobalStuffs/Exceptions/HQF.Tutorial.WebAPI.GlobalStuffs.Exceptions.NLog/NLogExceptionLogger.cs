@@ -3,7 +3,7 @@ using System.Text;
 using System.Web.Http.ExceptionHandling;
 using NLog;
 
-namespace HQF.Tutorial.WebAPI.Filters.Exceptions.NLog
+namespace HQF.Tutorial.WebAPI.GlobalStuffs.Exceptions.NLog
 {
     public class NLogExceptionLogger : ExceptionLogger
     {
