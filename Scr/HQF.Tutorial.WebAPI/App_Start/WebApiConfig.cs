@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using System.Web.Http.ExceptionHandling;
+using HQF.Tutorial.WebAPI.Filters.Exceptions.NLog;
 
 namespace HQF.Tutorial.WebAPI
 {
@@ -11,6 +13,9 @@ namespace HQF.Tutorial.WebAPI
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+
+            //Register Exception Loger
+            RegisterExceptionLogers(config);
 
             //Enable CORS
             //config.EnableCors();
@@ -26,5 +31,12 @@ namespace HQF.Tutorial.WebAPI
                 defaults: new { id = RouteParameter.Optional }
             );
         }
+
+        private static void RegisterExceptionLogers(HttpConfiguration config)
+        {
+            config.Services.Add(typeof(IExceptionLogger), new NLogExceptionLogger());
+        }
+
+
     }
 }

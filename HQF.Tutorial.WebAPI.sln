@@ -7,6 +7,24 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WebAPI", "Scr\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WebAPI.WebAPP", "Scr\HQF.Tutorial.WebAPI.WebAPP\HQF.Tutorial.WebAPI.WebAPP.csproj", "{70FE5458-1224-402B-816F-95C62EF41845}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Filters", "Filters", "{7CF24180-E006-441F-A916-CCAF1FD38C90}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exceptions", "Exceptions", "{5EA2F4E0-3D9D-49DE-A60E-4896C9D92BC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4A1D9803-CB30-4D66-A109-60BAB9F55319}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GlobalStuffs", "GlobalStuffs", "{A3B5336B-EC95-4421-B50A-85A69931E145}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exceptions", "Exceptions", "{335E1F05-210F-42DC-A5D3-99C68E559759}"
+	ProjectSection(SolutionItems) = preProject
+		Scr\GlobalStuffs\Exceptions\Exceptions.md = Scr\GlobalStuffs\Exceptions\Exceptions.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WebAPI.GlobalStuffs.Exceptions.NLog", "Scr\GlobalStuffs\Exceptions\HQF.Tutorial.WebAPI.GlobalStuffs.Exceptions.NLog\HQF.Tutorial.WebAPI.GlobalStuffs.Exceptions.NLog.csproj", "{E52C61B0-64C7-443E-981F-5AB3DC871636}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +39,17 @@ Global
 		{70FE5458-1224-402B-816F-95C62EF41845}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70FE5458-1224-402B-816F-95C62EF41845}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70FE5458-1224-402B-816F-95C62EF41845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E52C61B0-64C7-443E-981F-5AB3DC871636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E52C61B0-64C7-443E-981F-5AB3DC871636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E52C61B0-64C7-443E-981F-5AB3DC871636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E52C61B0-64C7-443E-981F-5AB3DC871636}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5EA2F4E0-3D9D-49DE-A60E-4896C9D92BC3} = {7CF24180-E006-441F-A916-CCAF1FD38C90}
+		{335E1F05-210F-42DC-A5D3-99C68E559759} = {A3B5336B-EC95-4421-B50A-85A69931E145}
+		{E52C61B0-64C7-443E-981F-5AB3DC871636} = {335E1F05-210F-42DC-A5D3-99C68E559759}
 	EndGlobalSection
 EndGlobal
