@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.ExceptionHandling;
+using HQF.Tutorial.WebAPI.Filters.Exceptions;
 using HQF.Tutorial.WebAPI.GlobalStuffs.Exceptions.NLog;
 
 namespace HQF.Tutorial.WebAPI
@@ -34,7 +35,10 @@ namespace HQF.Tutorial.WebAPI
 
         private static void RegisterExceptionLogers(HttpConfiguration config)
         {
+            //global exception handling
             config.Services.Add(typeof(IExceptionLogger), new NLogExceptionLogger());
+            //filter execption handling
+            config.Filters.Add(new NotImplExceptionFilterAttribute());
         }
 
 

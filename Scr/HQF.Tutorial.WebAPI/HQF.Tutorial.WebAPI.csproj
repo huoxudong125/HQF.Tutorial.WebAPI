@@ -119,6 +119,10 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Filters\Exceptions\HQF.Tutorial.WebAPI.Exceptions\HQF.Tutorial.WebAPI.Filters.Exceptions.csproj">
+      <Project>{3f2c85ba-10a8-499b-813a-5daf02cfe279}</Project>
+      <Name>HQF.Tutorial.WebAPI.Filters.Exceptions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GlobalStuffs\Exceptions\HQF.Tutorial.WebAPI.GlobalStuffs.Exceptions.NLog\HQF.Tutorial.WebAPI.GlobalStuffs.Exceptions.NLog.csproj">
       <Project>{e52c61b0-64c7-443e-981f-5ab3dc871636}</Project>
       <Name>HQF.Tutorial.WebAPI.GlobalStuffs.Exceptions.NLog</Name>
