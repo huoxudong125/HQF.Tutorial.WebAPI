@@ -11,7 +11,11 @@ namespace HQF.Tutorial.WebAPI.Filters.Exceptions
         {
             if (context.Exception is NotImplementedException)
             {
-                context.Response = new HttpResponseMessage(HttpStatusCode.NotImplemented);
+                context.Response = new HttpResponseMessage(HttpStatusCode.NotImplemented)
+                {
+                    Content = new StringContent("Has filted by NotImplExceptionFilterAttribute by HQF")
+                };
+                
             }
         }
     }
