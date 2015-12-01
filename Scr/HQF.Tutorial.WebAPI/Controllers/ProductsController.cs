@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using HQF.Tutorial.WebAPI.Models;
 
 namespace HQF.Tutorial.WebAPI.Controllers
 {
+    //[EnableCors("http://localhost:31272", "*", "*")]//Golally Open CORS for website:http://localhost:31272 
     public class ProductsController : ApiController
     {
         private readonly Product[] products =
