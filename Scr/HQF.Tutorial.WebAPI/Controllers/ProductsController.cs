@@ -21,6 +21,8 @@ namespace HQF.Tutorial.WebAPI.Controllers
             return products;
         }
 
+       
+
         public IHttpActionResult GetProduct(int id)
         {
             var product = products.FirstOrDefault(p => p.Id == id);

@@ -56,10 +56,10 @@
     </script>
 
     <script>
-        var uri = 'http://localhost:14583/api/exception/product';
+        var exuri = 'http://localhost:14583/api/exception/product';
         function raiseNotImplement() {
           
-            $.getJSON(uri)
+            $.getJSON(exuri)
                 .done(function (data) {
                     $('#errorPanel').text(formatItem(data));
                 })

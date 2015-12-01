@@ -102,7 +102,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -117,8 +116,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\HQF.Tutorial.WebAPI.Entities\HQF.Tutorial.WebAPI.Entities.csproj">
+      <Project>{cc3e6d8a-4e47-4b28-8f79-ec4891bd94bf}</Project>
+      <Name>HQF.Tutorial.WebAPI.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Filters\Exceptions\HQF.Tutorial.WebAPI.Exceptions\HQF.Tutorial.WebAPI.Filters.Exceptions.csproj">
       <Project>{3f2c85ba-10a8-499b-813a-5daf02cfe279}</Project>
       <Name>HQF.Tutorial.WebAPI.Filters.Exceptions</Name>
