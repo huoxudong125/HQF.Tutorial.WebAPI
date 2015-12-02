@@ -35,6 +35,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{D2AB84
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WebAPI.Entities", "Scr\Common\HQF.Tutorial.WebAPI.Entities\HQF.Tutorial.WebAPI.Entities.csproj", "{CC3E6D8A-4E47-4B28-8F79-EC4891BD94BF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Handlers", "Handlers", "{3E799B93-6B4D-4330-832E-2B567791AD55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WebAPI.MessageHandlers.ClientSide", "Scr\MessageHandlers\HQF.Tutorial.WebAPI.MessageHandlers.ClientSide\HQF.Tutorial.WebAPI.MessageHandlers.ClientSide.csproj", "{BA014527-65BB-4D99-B0E0-6BF3A3D87524}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WebAPI.MessageHandlers.ServerSide", "Scr\MessageHandlers\HQF.Tutorial.WebAPI.MessageHandlers.ServerSide\HQF.Tutorial.WebAPI.MessageHandlers.ServerSide.csproj", "{B0D3A777-C966-4310-B0D0-E8B9E37C5EC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +71,14 @@ Global
 		{CC3E6D8A-4E47-4B28-8F79-EC4891BD94BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC3E6D8A-4E47-4B28-8F79-EC4891BD94BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC3E6D8A-4E47-4B28-8F79-EC4891BD94BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA014527-65BB-4D99-B0E0-6BF3A3D87524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA014527-65BB-4D99-B0E0-6BF3A3D87524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA014527-65BB-4D99-B0E0-6BF3A3D87524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA014527-65BB-4D99-B0E0-6BF3A3D87524}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0D3A777-C966-4310-B0D0-E8B9E37C5EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D3A777-C966-4310-B0D0-E8B9E37C5EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D3A777-C966-4310-B0D0-E8B9E37C5EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D3A777-C966-4310-B0D0-E8B9E37C5EC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,5 +91,7 @@ Global
 		{70FE5458-1224-402B-816F-95C62EF41845} = {7B518196-97F8-48B4-9962-D9945B0EA215}
 		{81EA0E95-D656-4606-95A5-423012DBE171} = {7B518196-97F8-48B4-9962-D9945B0EA215}
 		{CC3E6D8A-4E47-4B28-8F79-EC4891BD94BF} = {D2AB8446-1EAE-4E85-A99C-8CEBF6E3E7FB}
+		{BA014527-65BB-4D99-B0E0-6BF3A3D87524} = {3E799B93-6B4D-4330-832E-2B567791AD55}
+		{B0D3A777-C966-4310-B0D0-E8B9E37C5EC1} = {3E799B93-6B4D-4330-832E-2B567791AD55}
 	EndGlobalSection
 EndGlobal
