@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WebAPI.Message
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WebAPI.MessageHandlers.ServerSide", "Scr\MessageHandlers\HQF.Tutorial.WebAPI.MessageHandlers.ServerSide\HQF.Tutorial.WebAPI.MessageHandlers.ServerSide.csproj", "{B0D3A777-C966-4310-B0D0-E8B9E37C5EC1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{65D047BC-02A6-4D06-8189-D661249A50B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
