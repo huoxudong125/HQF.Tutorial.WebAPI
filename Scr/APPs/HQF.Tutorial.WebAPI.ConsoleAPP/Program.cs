@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
+using HQF.Tutorial.WebAPI.MessageHandlers.ClientSide;
 using HQF.Tutorial.WebAPI.Models;
 
 namespace HQF.Tutorial.WebAPI.ConsoleAPP
 {
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
             try
             {
@@ -25,41 +24,43 @@ namespace HQF.Tutorial.WebAPI.ConsoleAPP
             }
             catch (Exception)
             {
-
                 throw;
             }
-         
         }
 
-        static async Task RunAsync()
+        private static async Task RunAsync()
         {
-            using (var client = new HttpClient())
+            using (var sw = File.OpenWrite("WebApiHttpClientLog.log"))
             {
-                client.BaseAddress = new Uri("http://localhost:14583/");
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-                // HTTP GET
-                HttpResponseMessage response = await client.GetAsync("api/products/1");
-                if (response.IsSuccessStatusCode)
+                //using (var client = new HttpClient())
+                using (var client = HttpClientFactory.Create(new LoggingHandler(sw)))//in order to add message handler using create()
                 {
-                    Product product = await response.Content.ReadAsAsync<Product>();
-                    Console.WriteLine("{0}\t${1}\t{2}", product.Name, product.Price, product.Category);
-                }
+                    client.BaseAddress = new Uri("http://localhost:14583/");
+                    client.DefaultRequestHeaders.Accept.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                // HTTP POST
-                var gizmo = new Product() { Name = "Gizmo", Price = 100, Category = "Widget" };
-                response = await client.PostAsJsonAsync("api/products", gizmo);
-                if (response.IsSuccessStatusCode)
-                {
-                    Uri gizmoUrl = response.Headers.Location;
+                    // HTTP GET
+                    var response = await client.GetAsync("api/products/1");
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var product = await response.Content.ReadAsAsync<Product>();
+                        Console.WriteLine("{0}\t${1}\t{2}", product.Name, product.Price, product.Category);
+                    }
 
-                    // HTTP PUT
-                    gizmo.Price = 80;   // Update price
-                    response = await client.PutAsJsonAsync(gizmoUrl, gizmo);
+                    // HTTP POST
+                    var gizmo = new Product {Name = "Gizmo", Price = 100, Category = "Widget"};
+                    response = await client.PostAsJsonAsync("api/products", gizmo);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var gizmoUrl = response.Headers.Location;
 
-                    // HTTP DELETE
-                    response = await client.DeleteAsync(gizmoUrl);
+                        // HTTP PUT
+                        gizmo.Price = 80; // Update price
+                        response = await client.PutAsJsonAsync(gizmoUrl, gizmo);
+
+                        // HTTP DELETE
+                        response = await client.DeleteAsync(gizmoUrl);
+                    }
                 }
             }
         }

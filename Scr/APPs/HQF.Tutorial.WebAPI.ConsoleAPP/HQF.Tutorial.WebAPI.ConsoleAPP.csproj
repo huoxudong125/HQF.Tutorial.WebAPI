@@ -63,6 +63,10 @@
       <Project>{cc3e6d8a-4e47-4b28-8f79-ec4891bd94bf}</Project>
       <Name>HQF.Tutorial.WebAPI.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\MessageHandlers\HQF.Tutorial.WebAPI.MessageHandlers.ClientSide\HQF.Tutorial.WebAPI.MessageHandlers.ClientSide.csproj">
+      <Project>{ba014527-65bb-4d99-b0e0-6bf3a3d87524}</Project>
+      <Name>HQF.Tutorial.WebAPI.MessageHandlers.ClientSide</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
