@@ -46,6 +46,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WebAPI.Message
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{65D047BC-02A6-4D06-8189-D661249A50B4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DelegatingHandlers", "DelegatingHandlers", "{16E543C6-209C-45CB-8C62-A672334967BC}"
+	ProjectSection(SolutionItems) = preProject
+		Scr\DelegatingHandlers\Readme.md = Scr\DelegatingHandlers\Readme.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WebAPI.PerRequestHandler", "Scr\DelegatingHandlers\HQF.Tutorial.WebAPI.PerRequestHandler\HQF.Tutorial.WebAPI.PerRequestHandler.csproj", "{C947D2E0-CD3E-46F8-B9D7-1452E4521DA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WebAPI.Extensions", "Scr\Common\HQF.Tutorial.WebAPI.Extensions\HQF.Tutorial.WebAPI.Extensions.csproj", "{E4EA8C26-8BF4-4AFE-9381-D86E367DEB3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,6 +93,14 @@ Global
 		{B0D3A777-C966-4310-B0D0-E8B9E37C5EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0D3A777-C966-4310-B0D0-E8B9E37C5EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0D3A777-C966-4310-B0D0-E8B9E37C5EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C947D2E0-CD3E-46F8-B9D7-1452E4521DA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C947D2E0-CD3E-46F8-B9D7-1452E4521DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C947D2E0-CD3E-46F8-B9D7-1452E4521DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C947D2E0-CD3E-46F8-B9D7-1452E4521DA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4EA8C26-8BF4-4AFE-9381-D86E367DEB3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4EA8C26-8BF4-4AFE-9381-D86E367DEB3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4EA8C26-8BF4-4AFE-9381-D86E367DEB3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4EA8C26-8BF4-4AFE-9381-D86E367DEB3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,5 +115,7 @@ Global
 		{CC3E6D8A-4E47-4B28-8F79-EC4891BD94BF} = {D2AB8446-1EAE-4E85-A99C-8CEBF6E3E7FB}
 		{BA014527-65BB-4D99-B0E0-6BF3A3D87524} = {3E799B93-6B4D-4330-832E-2B567791AD55}
 		{B0D3A777-C966-4310-B0D0-E8B9E37C5EC1} = {3E799B93-6B4D-4330-832E-2B567791AD55}
+		{C947D2E0-CD3E-46F8-B9D7-1452E4521DA3} = {16E543C6-209C-45CB-8C62-A672334967BC}
+		{E4EA8C26-8BF4-4AFE-9381-D86E367DEB3F} = {D2AB8446-1EAE-4E85-A99C-8CEBF6E3E7FB}
 	EndGlobalSection
 EndGlobal
