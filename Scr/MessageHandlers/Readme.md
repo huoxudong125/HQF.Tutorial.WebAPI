@@ -42,3 +42,6 @@ Message handlers are called in the order that you pass them into the `Create` me
 ##More Details
 [HTTP Message Handlers in ASP.NET Web API](http://www.asp.net/web-api/overview/advanced/http-message-handlers)    
 [HttpClient Message Handlers in ASP.NET Web API](http://www.asp.net/web-api/overview/advanced/httpclient-message-handlers) 
+
+#Extend by Handlers
+[ThrottlingHandler](https://github.com/stefanprodan/WebApiThrottle)

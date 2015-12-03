@@ -35,7 +35,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{D2AB84
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WebAPI.Entities", "Scr\Common\HQF.Tutorial.WebAPI.Entities\HQF.Tutorial.WebAPI.Entities.csproj", "{CC3E6D8A-4E47-4B28-8F79-EC4891BD94BF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Handlers", "Handlers", "{3E799B93-6B4D-4330-832E-2B567791AD55}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MessageHandlers", "MessageHandlers", "{3E799B93-6B4D-4330-832E-2B567791AD55}"
+	ProjectSection(SolutionItems) = preProject
+		Scr\MessageHandlers\Readme.md = Scr\MessageHandlers\Readme.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WebAPI.MessageHandlers.ClientSide", "Scr\MessageHandlers\HQF.Tutorial.WebAPI.MessageHandlers.ClientSide\HQF.Tutorial.WebAPI.MessageHandlers.ClientSide.csproj", "{BA014527-65BB-4D99-B0E0-6BF3A3D87524}"
 EndProject
