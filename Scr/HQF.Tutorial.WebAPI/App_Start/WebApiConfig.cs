@@ -6,6 +6,7 @@ using System.Web.Http.Cors;
 using System.Web.Http.ExceptionHandling;
 using HQF.Tutorial.WebAPI.Filters.Exceptions;
 using HQF.Tutorial.WebAPI.GlobalStuffs.Exceptions.NLog;
+using System.Web.Mvc;
 
 namespace HQF.Tutorial.WebAPI
 {
@@ -26,11 +27,16 @@ namespace HQF.Tutorial.WebAPI
             // Web API routes
             config.MapHttpAttributeRoutes();
 
+
+            AreaRegistration.RegisterAllAreas();
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+           
         }
 
         private static void RegisterExceptionLogers(HttpConfiguration config)
