@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using HQF.Tutorial.WebAPI.Models;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
-using System.Web.Http.Cors;
-using HQF.Tutorial.WebAPI.Models;
 
 namespace HQF.Tutorial.WebAPI.Controllers
 {
-    //[EnableCors("http://localhost:31272", "*", "*")]//Golally Open CORS for website:http://localhost:31272 
+    //[EnableCors("http://localhost:31272", "*", "*")]//Golally Open CORS for website:http://localhost:31272
     public class ProductsController : ApiController
     {
         private readonly Product[] products =
@@ -16,13 +15,20 @@ namespace HQF.Tutorial.WebAPI.Controllers
             new Product {Id = 3, Name = "Hammer", Category = "Hardware", Price = 16.99M}
         };
 
+        /// <summary>
+        /// Get all Products
+        /// </summary>
+        /// <returns>A array of Product</returns>
         public IEnumerable<Product> GetAllProducts()
         {
             return products;
         }
 
-       
-
+        /// <summary>
+        /// Get the Product
+        /// </summary>
+        /// <param name="id">Prodcut Id</param>
+        /// <returns>200 if find the product</returns>
         public IHttpActionResult GetProduct(int id)
         {
             var product = products.FirstOrDefault(p => p.Id == id);
@@ -33,7 +39,5 @@ namespace HQF.Tutorial.WebAPI.Controllers
 
             return Ok(product);
         }
-
-
     }
 }
